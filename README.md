@@ -1,1 +1,1 @@
-# OTS_PUBLIC
+Open Tibia Server for browsers - by Pluto and Kabitek!
