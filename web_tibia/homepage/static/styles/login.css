@@ -1,0 +1,47 @@
+body {
+	max-height: 100vh;
+	max-width: 100vw;
+	background: rgb(5, 5, 5);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+body img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+#login{
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    top: 50%;
+    margin-top: -400px;
+    background: rgba(126, 33, 33, 0.466);
+    width: 1200px;
+    height: 800px;;
+}
+
+.toprame img{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -750px;
+    top: -70px;
+    width: 1500px;
+    height: 250px;
+}
+   
+.bottomrame img{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -770px;
+    bottom: -50px;
+    width: 1500px;
+    height: 250px;
+}
+
+
