@@ -1,4 +1,4 @@
- body {
+body {
 	max-height: 100vh;
 	max-width: 100vw;
 	background: rgb(5, 5, 5);
@@ -35,12 +35,10 @@ nav {
 	z-index: 3;
 }
 		.menu {
-			min-height: 500px;
 			position: relative;
-			max-width: 70vw;
+			max-width: 100vw;
 			margin-left: auto;
 			margin-right: auto;
-			grid-row: span 3;
 		}
 		.menu > ul {
 			display: flex;
@@ -53,9 +51,13 @@ nav {
 		}
 		.menu > ul > li {
 			font-size: 17px;
-			margin-right: 3%;
-			background: linear-gradient(to bottom, rgba(83, 62, 62, 0.938), rgba(153, 34, 34, 0.911));
-			box-shadow: -1px 4px 15px 0px #c4bcb369;
+			margin-right: 5%;
+		}
+
+		.menu > ul > li > a{
+			background: linear-gradient(to bottom, rgba(83, 62, 62, 0.938), rgb(153, 34, 34));
+			border: 2px solid rgb(0, 0, 0);
+			box-shadow: 0px 0px 30px 10px rgb(0, 0, 0);
 			border-radius: 12%;
 			padding: 5px 50px 5px 50px;
 		}
@@ -148,13 +150,22 @@ nav {
 			position: absolute;
 			left: 50%;
 			margin-left: -5em;
-			top: 6%;
+			top: 3%;
 			background: transparent;
 			border: none;
 			outline: none;
 			cursor: pointer;
 			transform: translateY(-300px);
 			transition: ease-in-out 0.3s;
+		}
+		.skull{
+			width: 7em;
+			height: 5.5em;
+			background-image: url('../img/skull.png');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			transform: translateY(-300px) translateX(20px);
+			transition: 0.3s ease-in-out;
 		}
 		.line {
 			width: 10em;
@@ -167,49 +178,92 @@ nav {
 			transition: 0.3s ease-in-out;
 		}
 .logomain {
+	position: relative;
 	background-color: rgba(255, 9, 9, 0);
     grid-column: 1 / -1;
 	grid-row: auto;
+	/* roboczy odstep pomedzy menu a contentem*/
+	min-height: 250px;
 }
-		#playbutton{
+		.playbutton{
 			position: absolute;
-			z-index: 3;
-			top: 20%;
+			top: 30%;
 			right: 20%;
+			z-index: 3;
+			border-radius: 12%;
+			transition: 0.15s;
+		}
+		.playbutton a{
+			display: block;
 			width: 200px;
 			height: 100px;
-			border: 2px solid rgb(0, 0, 0);
-			border-radius: 10% ;
 			background: linear-gradient(to bottom, rgb(83, 62, 62), rgb(153, 34, 34));
 			font-size: 30px;
 			line-height: 100px;
 			text-align: center;
-			transition: 0.3s;
-			box-shadow: 0px 0px 30px 10px;
-		}
-		#playbutton a{
-			padding: 35px;
+			border: 2px solid rgb(0, 0, 0);
+			box-shadow: 0px 0px 30px 10px rgb(0, 0, 0);
+			border-radius: 12%;
 			color: rgb(238, 243, 247);
 		}
+.borderline{
+	position: relative;
+	display: grid;
+	grid-column: 1 / -1;
+	height: 30px;
+				}
+			.borderline img{
+				position: absolute;
+				top: -180px;
+				left: 50%;
+				margin-left: -25%;
+				min-height: 400px;
+				max-width:  50%;
+			}
+h1{
+	position: absolute;
+	top: 50%;
+	margin-top: 30px;
+	left: 50%;
+	margin-left: -40px;
+	width: 100px;
+	height: 50px;
+	color: aliceblue;
+}
+.borderlinedown{
+	position: relative;
+	display: grid;
+	grid-column: 1 / -1;
+	height: 30px;
+				}
+			.borderlinedown img{
+				position: absolute;
+				top: -120px;
+				left: 50%;
+				margin-left: -25%;
+				min-height: 400px;
+				max-width:  50%;
+			}
 .content {
 	background: linear-gradient(to bottom, rgba(83, 62, 62, 0), rgb(153, 34, 34));
 	color: aliceblue;
 	font-size: 20px;
 	font-weight: 100;
     grid-column: 5 /-5;
+	margin-top: 20px;
 	padding: 70px;
 	z-index: 1;
 	transition: 1s;
 }
 .navleft{
 	background: rgba(221, 11, 221, 0);
-	grid-column: 1 / 5;
+	grid-column: 1 / 4;
 	grid-row: 6;
 	
 }
 .navright{
 	background: rgb(245, 3, 43);
-	grid-column: -5 / -1 ;
+	grid-column: -4 / -1 ;
 }
 
 .footer {
@@ -218,32 +272,40 @@ nav {
 	z-index: 1;
 	grid-row: span 3;
 }
+@media (max-width: 1300px) {
+	.content{
+		grid-column: 4 / -4;
+	}
+}
 /*958px resolution*/
 	@media (min-width: 956px) {
+		.content{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1120px;
+		}
 		.menu > ul > li {
 			transform: scale(1, 1);
 			transition: 0.3s;
 		}
-		#playbutton{
-			top: 20%;
-			right: 20%;
+		.playbutton{
 			transition: 0.3s;
 		}
 	}
 	@media (max-width: 956px) {
 		.content {
-			grid-column: 4 /-4;	
+			grid-column: 3 /-3;	
 		}
 		.menu > ul > li {
-			transform: scale(0.8, 0.9);
+			transform: scale(0.8);
 			transition: 0.3s;
 			margin-right: 0;
 		}	
 		.navleft{
-			grid-column: 1 / 4;	
+			grid-column: 1 / 3;	
 		}
 		.navright{
-			grid-column: -4 / -1 ;
+			grid-column: -3 / -1 ;
 		}	
 	}
 /*745px resolution*/
@@ -253,19 +315,29 @@ nav {
 			color: aliceblue;
 			font-size: 20px;
 			font-weight: 100;
-			grid-column: 2 /-1;
-			padding: 70px;
+			grid-column: 1 /-1;
+			padding: 90px;
 			z-index: 1;
 			transition: 1s;
 		}
 		.menu > ul > li {
 			font-size: 20px;
-			transform: scale(0.6, 0.6);
+			transform: scale(0.5);
 			margin-left: -55px;
 		}
-		#playbutton{
+		.playbutton {
 			left: 50%;
-			margin-left: -100px;
+			transform: translateX(-100px);
+		}
+		.borderline img{
+			min-width: 100%;
+			left: 0;
+			margin: 0;
+		}
+		.borderlinedown img{
+			min-width: 100%;
+			left: 0;
+			margin: 0;
 		}
 		.navleft{
 			display: none;
@@ -280,12 +352,12 @@ nav {
 	.content{
 		background: linear-gradient(to bottom, rgba(83, 62, 62, 0) 1%, rgb(153, 34, 34) 20%);
 		margin: 0;
-		padding: 30px;
+		padding: 90px;
 		font-size: 15px;
 	}
 	.menu > ul > li {
 		font-size: 20px;
-		transform: scale(0.5, 0.5);
+		transform: scale(0.5);
 		margin-left: -70px;
 	}
 	.menu > ul > li:first-child{
@@ -296,47 +368,60 @@ nav {
 	@media (max-width: 470px) {
 		.content {
 			grid-column: 1 /-1;	
+			padding: 20px;
+			transform: translateY(80px);
 		}
 		.menu {
-			position: relative;
+			position: fixed;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			width: 100%;
-			margin-left: auto;
 			z-index: 4;
 		}
 		.menu > ul {
-			position: absolute;
-			left: 50%;
-			margin-left: -25px;
+			text-align: center;
 			flex-direction: column;
 			align-items: center;
-			width: 50px;
+			transform: translateX(300px);
+			z-index: 1;
 			opacity: 0;
 		}
 		.menu > ul > li {
-			position: relative;
-			flex-direction: column;
-			align-items: center;
-			width: 300px;
 			height: 50px;
-			margin-bottom: -20px;
+			margin-bottom: -10px;
 			font-size: 2rem;
 			letter-spacing: 7px;
-			box-shadow: -1px 4px 15px 0px #13110f69;
+		}
+		.menu > ul > li > a {
+			display: block;
+			min-width: 300px;
+			min-height: 50px;
 		}
 		.menu > ul > li:first-child{
 			margin-left: -70px;
 		}
+		.menu > ul > li:last-child{
+			margin-left: -70px;
+		}
 		.menu > ul.active{
 			opacity: 1;
-			transform: translateY(50%);
+			transform: translateY(130px) translateX(15px);
 			transition: 0.3s;
 		}
-		.burger {
-			transform: translateY(0);
+		.playbutton{
+			position: fixed;
+			transition: 0.1s;
+			transform: scale(0.6) translateY(-380px) translateX(-138px);
+			z-index: 5;
+			
 		}
+		.burger {
+			position: fixed;
+			transform: translateY(-30px) translateX(-10px) scale(0.7);
+		}
+	
 		.burger.active .line:first-child{
+			transition: 0s;
 			transform: translateY(-300px);
 		}
 		.burger.active .line:nth-child(2){
@@ -344,6 +429,9 @@ nav {
 		}
 		.burger.active .line:nth-child(3){
 			transform: rotate(-1225deg) translateY(25px) translateX(25px);
+		}
+		.burger.active .skull{
+			transform:translateY(-140px) translateX(20px) ;
 		}
 	}
 

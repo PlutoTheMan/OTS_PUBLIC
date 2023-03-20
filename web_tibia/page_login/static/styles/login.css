@@ -40,11 +40,11 @@ body img{
     position: relative;
     background: rgb(82, 57, 57);
     top: 50%;
-    margin-top: -180px;
+    margin-top: -165px;
     left: 50%;
     margin-left: -180px;
     width: 300px;
-    height: 300px;
+    height: 280px;
     padding: 30px;
 }
 label{
