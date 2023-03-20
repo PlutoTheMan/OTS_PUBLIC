@@ -1,4 +1,4 @@
-body {
+ body {
 	max-height: 100vh;
 	max-width: 100vw;
 	background: rgb(5, 5, 5);
@@ -9,10 +9,9 @@ body {
 }
 body img{
 	position: absolute;
-	left: 5%;
 	width: 100vw;
 	height: 100%;
-	margin-left: -70px;
+	margin: 0;
 	z-index: -1;
 }
 /*linkdecoration*/
@@ -61,7 +60,7 @@ nav {
 			padding: 5px 50px 5px 50px;
 		}
 					/*cloud top*/
-					/*.cloud {
+					.cloud {
 						width: 0;
 						height: 0;
 						border-radius: 50%;
@@ -76,9 +75,9 @@ nav {
 						box-shadow:  0 180px 15px 60px rgba(83, 62, 62, 0.938);
 						z-index: 2;
 					}
-*/
+
 					/*clouds left*/
-						/*#cloud-menu-top {
+						#cloud-menu-top {
 						top: 0%;
 						height: 150vh;
 						width: 10px;
@@ -144,7 +143,6 @@ nav {
 							}
 								
 							  }
-					*/
 		/* Burger Styling */
 		.burger {
 			position: absolute;
@@ -161,7 +159,7 @@ nav {
 		.line {
 			width: 10em;
 			height: 2.5em;
-			background-image: url(img/burgerline.png);
+			background-image: url('../img/burgerline.png');
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 			margin: 0.2em;
@@ -173,7 +171,7 @@ nav {
     grid-column: 1 / -1;
 	grid-row: auto;
 }
-		/*#playbutton{
+		#playbutton{
 			position: absolute;
 			z-index: 3;
 			top: 20%;
@@ -193,26 +191,25 @@ nav {
 			padding: 35px;
 			color: rgb(238, 243, 247);
 		}
-*/
 .content {
 	background: linear-gradient(to bottom, rgba(83, 62, 62, 0), rgb(153, 34, 34));
 	color: aliceblue;
 	font-size: 20px;
 	font-weight: 100;
-    grid-column: 4 /-4;
+    grid-column: 5 /-5;
 	padding: 70px;
 	z-index: 1;
 	transition: 1s;
 }
 .navleft{
-	background: rgba(128, 0, 128, 0);
-	grid-column: 1 / 4;
+	background: rgba(221, 11, 221, 0);
+	grid-column: 1 / 5;
 	grid-row: 6;
 	
 }
 .navright{
-	background: pink;
-	grid-column: -4 / -1 ;
+	background: rgb(245, 3, 43);
+	grid-column: -5 / -1 ;
 }
 
 .footer {
@@ -223,7 +220,6 @@ nav {
 }
 /*958px resolution*/
 	@media (min-width: 956px) {
-
 		.menu > ul > li {
 			transform: scale(1, 1);
 			transition: 0.3s;
@@ -235,14 +231,33 @@ nav {
 		}
 	}
 	@media (max-width: 956px) {
+		.content {
+			grid-column: 4 /-4;	
+		}
 		.menu > ul > li {
 			transform: scale(0.8, 0.9);
 			transition: 0.3s;
 			margin-right: 0;
-		}		
+		}	
+		.navleft{
+			grid-column: 1 / 4;	
+		}
+		.navright{
+			grid-column: -4 / -1 ;
+		}	
 	}
 /*745px resolution*/
 	@media (max-width: 775px) {
+		.content {
+			background: linear-gradient(to bottom, rgba(83, 62, 62, 0), rgb(153, 34, 34));
+			color: aliceblue;
+			font-size: 20px;
+			font-weight: 100;
+			grid-column: 2 /-1;
+			padding: 70px;
+			z-index: 1;
+			transition: 1s;
+		}
 		.menu > ul > li {
 			font-size: 20px;
 			transform: scale(0.6, 0.6);
@@ -252,9 +267,22 @@ nav {
 			left: 50%;
 			margin-left: -100px;
 		}
+		.navleft{
+			display: none;
+			
+		}
+		.navright{
+			display: none;
+		}
 	}
 /*650px resolution*/
 @media (max-width: 650px) {
+	.content{
+		background: linear-gradient(to bottom, rgba(83, 62, 62, 0) 1%, rgb(153, 34, 34) 20%);
+		margin: 0;
+		padding: 30px;
+		font-size: 15px;
+	}
 	.menu > ul > li {
 		font-size: 20px;
 		transform: scale(0.5, 0.5);
@@ -263,25 +291,22 @@ nav {
 	.menu > ul > li:first-child{
 			margin-left: -20px;
 	}
-	.content{
-		background: linear-gradient(to bottom, rgba(83, 62, 62, 0) 1%, rgb(153, 34, 34) 20%);
-		margin: 0;
-		padding: 30px;
-		font-size: 15px;
-	}
 }
 /*470px resolution*/
 	@media (max-width: 470px) {
+		.content {
+			grid-column: 1 /-1;	
+		}
 		.menu {
 			position: relative;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			width: 100%;
 			margin-left: auto;
+			z-index: 4;
 		}
 		.menu > ul {
 			position: absolute;
-			top: 5%;
 			left: 50%;
 			margin-left: -25px;
 			flex-direction: column;
@@ -305,7 +330,7 @@ nav {
 		}
 		.menu > ul.active{
 			opacity: 1;
-			transform: translateY(20%);
+			transform: translateY(50%);
 			transition: 0.3s;
 		}
 		.burger {
@@ -315,16 +340,10 @@ nav {
 			transform: translateY(-300px);
 		}
 		.burger.active .line:nth-child(2){
-			transform: rotate(-585deg) translateY(0px);
+			transform: rotate(-755deg) translateY(0px);
 		}
 		.burger.active .line:nth-child(3){
-			transform: rotate(-495deg) translateY(25px) translateX(25px);
+			transform: rotate(-1225deg) translateY(25px) translateX(25px);
 		}
 	}
-
- 
-   
-
-
-
 

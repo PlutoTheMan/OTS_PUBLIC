@@ -1,0 +1,106 @@
+body {
+	max-height: 100vh;
+	max-width: 100vw;
+	background: rgb(5, 5, 5);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+body img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+#login-main{
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    top: 50%;
+    margin-top: -400px;
+    background: rgba(126, 33, 33, 0.466);
+    width: 1200px;
+    height: 800px;;
+}
+
+.login{
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    top: 50%;
+    margin-top: -300px;
+    width: 600px;
+    height: 600px;
+    background: rgb(42, 46, 45);
+    text-align: center;
+}
+.login-center{
+    position: relative;
+    background: rgb(82, 57, 57);
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 300px;
+}
+label{
+    color: white;
+    font-size: 17px;
+}
+input{
+    display: block;
+    top: 50%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12%;
+    width: 200px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(83, 62, 62, 0.938), rgba(153, 34, 34, 0.911));
+    box-shadow: -1px 4px 15px 0px #c4bcb369;
+}
+
+#loginbutton2{
+        font-size: 17px;
+        margin-top: 50px;
+        background: linear-gradient(to bottom, rgba(83, 62, 62, 0.938), rgba(153, 34, 34, 0.911));
+        box-shadow: -1px 4px 15px 0px #c4bcb369;
+        border-radius: 12%;
+        padding: 5px 50px 5px 50px;
+        cursor: pointer;
+}
+.sociallogin{
+    position: absolute;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 75px;
+}
+.fb
+{   background: blue;
+	width: 75px;
+	height: 75px;
+	float:left;
+}
+
+.fb:hover
+{
+	background-color: #4668b3;
+}
+
+.google
+{
+    background: rgb(176, 176, 228);
+	width: 75px;
+	height: 75px;
+	float:left;
+}
+.google:hover
+{
+	background-color: #d95333;
+}
+
+
+
