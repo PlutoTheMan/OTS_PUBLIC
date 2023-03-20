@@ -7,16 +7,16 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "47bd87a650e95b97f947d275ed968efe",
-      "css": "facebook-squared",
-      "code": 62222,
-      "src": "entypo"
-    },
-    {
       "uid": "6d6d0efe9717ec2962ef0a77c6210df9",
       "css": "google",
       "code": 59392,
       "src": "zocial"
+    },
+    {
+      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
+      "css": "facebook",
+      "code": 61594,
+      "src": "fontawesome"
     }
   ]
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link rel="stylesheet" href="{% static './styles/font/fontello.css' %}">
     <title>Document</title>
 </head>
 <body><img src="../static/img/background1.jpg">
@@ -19,15 +20,18 @@
                     <input id="u_password" name="password" type="password">
                     <input id="loginbutton2" type="submit" value="Login">
                 </form>
-                <div class="sociallogin">
-                    <div class="fb" style="float: left;">
-                        <i class="icon-facebook-squared"></i>
+                    <div class="socials">
+                        <div class="sociallogin">
+                            <p>or log in with:</p>
+                            <div class="fb" style="float: left;">
+                                <i class="icon-facebook"></i>
+                            </div>
+                            <div class="google">
+                                <i class="icon-google"></i>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </div>
                     </div>
-                    <div class="google">
-                        <i class="icon-google"></i>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
             </div>
         </div>
     </div>
