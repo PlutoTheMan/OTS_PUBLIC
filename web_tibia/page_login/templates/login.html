@@ -1,13 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link rel="stylesheet" href="{% static './styles/font/fontello.css' %}">
     <title>Document</title>
 </head>
-<body>
-    LOGIN
+<body><img src="../static/img/background1.jpg">
+    <div id="login-main">
+        <div class="login">
+            <div class="login-center">
+                <form method="POST" action="/attempt_login">
+                    <label for="u_name">Username:</label>
+                    <input id="u_name" name="username" type="text">
+                    <label for="u_password">Password:</label>
+                    <input id="u_password" name="password" type="password">
+                    <input id="loginbutton2" type="submit" value="Login">
+                </form>
+                    <div class="socials">
+                        <div class="sociallogin">
+                            <p>or log in with:</p>
+                            <div class="fb" style="float: left;">
+                                <i class="icon-facebook"></i>
+                            </div>
+                            <div class="google">
+                                <i class="icon-google"></i>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="leftrame"></div>
+    <div class="rightrame"></div>
+    <div class="toprame"></div>
+    <div class="bottomrame"></div>
 </body>
 </html>
